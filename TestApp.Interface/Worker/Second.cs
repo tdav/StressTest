@@ -1,0 +1,51 @@
+﻿using System.Collections.Generic;
+
+namespace TestApp.Utils.Worker
+{
+    public class Second
+    {
+        public long Count { get; set; }
+        public long Bytes { get; private set; }
+        public long Errors { get; private set; }
+        public List<float> ResponseTimes { get; private set; }
+
+        public Second()
+        {
+            ResponseTimes = new List<float>();
+        }
+
+        internal void ClearResponseTimes()
+        {
+            ResponseTimes = new List<float>();
+        }
+
+        public void Add(long bytes, float responseTime, bool trackResponseTime)
+        {
+            Count++;
+            Bytes += bytes;
+
+            if (trackResponseTime)
+            {
+                ResponseTimes.Add(responseTime);
+            }
+        }
+
+        public void AddError(float responseTime, bool trackResponseTime)
+        {
+            Count++;
+            Errors++;
+
+            if (trackResponseTime)
+            {
+                ResponseTimes.Add(responseTime);
+            }
+        }
+
+        public void AddMerged(Second second)
+        {
+            Count += second.Count;
+            Bytes += second.Bytes;
+            Errors += second.Errors;
+        }
+    }
+}
