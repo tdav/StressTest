@@ -27,7 +27,7 @@ namespace TestApp
             CancellationToken cancellationToken = new CancellationToken();
 
             var worker = new Worker(new LoginUserTest());
-            WorkerResult result = await worker.Run("Login", 10, cancellationToken);
+            WorkerResult result = await worker.Run("Login", 8, TimeSpan.FromMinutes(1), cancellationToken);
 
             Console.WriteLine(ResultString,
                 result.Count,
@@ -80,5 +80,11 @@ Latency
     Max:            {8:0.000} ms
 {9}
 ";
+
+        private async void btnOne_Click(object sender, EventArgs e)
+        {
+            var t = new LoginUserTest(1, new WorkerThreadResult());
+           await t.DoWorkAsync();
+        }
     }
 }

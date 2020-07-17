@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiStressTestApp", "TaskScheduling\WebApiStressTestApp.csproj", "{32F1CCB4-7F11-4947-82B7-D0D67551D7FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{32F1CCB4-7F11-4947-82B7-D0D67551D7FA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{2E3B91BF-0F26-4DAC-9451-147AA2A4C889}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp.Utils", "TestApp.Interface\TestApp.Utils.csproj", "{C6F25170-B36D-4035-BF2B-CB4B1252D5C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T1.plg", "T1.plg\T1.plg.csproj", "{0CF43468-9F7E-417C-ACEA-95026B46909A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginApiTest.plg", "LoginApiTest.plg\LoginApiTest.plg.csproj", "{0CF43468-9F7E-417C-ACEA-95026B46909A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

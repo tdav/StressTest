@@ -38,7 +38,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\Debug\</OutputPath>
+    <OutputPath>..\App\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
@@ -113,9 +113,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\T1.plg\T1.plg.csproj">
+    <ProjectReference Include="..\LoginApiTest.plg\LoginApiTest.plg.csproj">
       <Project>{0cf43468-9f7e-417c-acea-95026b46909a}</Project>
-      <Name>T1.plg</Name>
+      <Name>LoginApiTest.plg</Name>
     </ProjectReference>
     <ProjectReference Include="..\TestApp.Interface\TestApp.Utils.csproj">
       <Project>{c6f25170-b36d-4035-bf2b-cb4b1252d5c9}</Project>
